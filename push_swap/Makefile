@@ -6,14 +6,14 @@
 #    By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/06 13:26:08 by cade-jes          #+#    #+#              #
-#    Updated: 2025/06/06 13:40:58 by cade-jes         ###   ########.fr        #
+#    Updated: 2025/06/07 02:33:39 by cade-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
 
 SRCS		=	main.c \
-				push_swap.c \
+				push_swap.c
 				
 
 OBJ_DIR		=	obj

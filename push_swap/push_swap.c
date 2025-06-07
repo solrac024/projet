@@ -6,9 +6,16 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 13:38:33 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/06 13:39:13 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/07 02:53:33 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	push_swap(int *list_a, int *list_b, int len)
+{
+	(void)list_a;
+	(void)list_b;
+	(void)len;
+	return ;
+}
