@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 13:33:57 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/08 16:19:56 by cade-jes         ###   ########.fr       */
+/*   Created: 2025/06/08 13:17:15 by cade-jes          #+#    #+#             */
+/*   Updated: 2025/06/08 13:18:36 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-
-typedef struct new_list
+n_list	*ft_lstnew_ps(int content)
 {
-	int				content;
-	struct new_list	*next;
-}				n_list;
+	t_list	*list;
 
-int	main(int argc, char **argv);
-void	push_swap();
-n_list	*ft_lstnew_ps(int content);
-int	swap(n_list *list);
-int	push(n_list *list_1, n_list *list_2);
-
-#endif
+	list = malloc(sizeof(*list));
+	if (!list)
+		return (NULL);
+	list->content = content;
+	list->next = NULL;
+	return (list);
+}

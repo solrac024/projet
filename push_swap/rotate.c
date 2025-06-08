@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 13:33:57 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/08 16:19:56 by cade-jes         ###   ########.fr       */
+/*   Created: 2025/06/08 12:58:31 by cade-jes          #+#    #+#             */
+/*   Updated: 2025/06/08 13:57:07 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-
-typedef struct new_list
+n_list	*rotate_list(n_list **list)
 {
-	int				content;
-	struct new_list	*next;
-}				n_list;
-
-int	main(int argc, char **argv);
-void	push_swap();
-n_list	*ft_lstnew_ps(int content);
-int	swap(n_list *list);
-int	push(n_list *list_1, n_list *list_2);
-
-#endif
+	
+}
