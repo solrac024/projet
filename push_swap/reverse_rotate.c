@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/08 12:58:31 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/09 16:51:47 by cade-jes         ###   ########.fr       */
+/*   Created: 2025/06/09 13:19:54 by cade-jes          #+#    #+#             */
+/*   Updated: 2025/06/09 16:52:21 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	rotate(t_liste **list)
+static void	reverse_rotate(t_liste **list)
 {
 	t_liste	*start;
 	t_liste	*swap;
 
-	swap = *list;
-	start = (*list)->next;
-	while ((*list)->next != NULL)
+	start = *list;
+	while ((*list)->next->next != NULL)
 		*list = (*list)->next;
-	(*list)->next = swap;
-	swap->next = NULL;
-	*list = start;
+	swap = (*list)->next;
+	swap->next = start;
+	(*list)->next = NULL;
+	*list = swap;
 }
 
-void	rotate_a(t_liste **list_a)
+void	reverse_rotate_a(t_liste **list_a)
 {
-	rotate(list_a);
-	ft_printf("ra\n");
+	reverse_rotate(list_a);
+	ft_printf("rra\n");
 }
 
-void	rotate_b(t_liste **list_b)
+void	reverse_rotate_b(t_liste **list_b)
 {
-	rotate(list_b);
-	ft_printf("rb\n");
+	reverse_rotate(list_b);
+	ft_printf("rrb\n");
 }
 
-void	rotate_ab(t_liste **list_a, t_liste **list_b)
+void	reverse_rotate_ab(t_liste **list_a, t_liste **list_b)
 {
-	rotate(list_a);
-	rotate(list_b);
-	ft_printf("rr\n");
+	reverse_rotate(list_a);
+	reverse_rotate(list_b);
+	ft_printf("rrr\n");
 }

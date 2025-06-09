@@ -6,15 +6,20 @@
 #    By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/06 13:26:08 by cade-jes          #+#    #+#              #
-#    Updated: 2025/06/08 17:18:00 by cade-jes         ###   ########.fr        #
+#    Updated: 2025/06/09 17:02:51 by cade-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
 
-SRCS		=	main.c \
-				push_swap.c
-				
+SRCS		=	list.c \
+				main.c \
+				push.c \
+				push_swap.c \
+				reverse_rotate.c \
+				rotate.c \
+				swap.c \
+				verif.c
 
 OBJ_DIR		=	obj
 OBJS		=	$(SRCS:%.c=$(OBJ_DIR)/%.o)
@@ -42,11 +47,10 @@ $(LIBFT_A):
 	make -C $(LIBFT) all
 
 clean:
-	make -C $(LIBFT) clean
+	make -C $(LIBFT) fclean
 	$(RM) $(OBJ_DIR)
 
 fclean: clean
-	make -C $(LIBFT) fclean
 	$(RM) $(NAME)
 
 re: fclean all

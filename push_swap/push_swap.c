@@ -6,13 +6,13 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 13:38:33 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/08 10:28:15 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/09 13:16:49 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap()
+void	push_swap(void)
 {
 
 }
