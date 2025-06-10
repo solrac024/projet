@@ -6,7 +6,7 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 12:34:51 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/09 13:33:50 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/10 15:42:48 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	verif_duplicate(int *num, int argc)
 	return (1);
 }
 
-static int	verif_int(int *num, int	argc)
+static int	verif_int(int *num, int argc)
 {
 	int	i;
 
@@ -89,7 +89,7 @@ static int	verif_num(char **argv)
 int	verif(char **argv, int argc)
 {
 	int	*num;
-	
+
 	if (verif_num(argv) == 0)
 		return (0);
 	num = atoi_to_argv(argv, argc);

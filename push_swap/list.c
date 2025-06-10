@@ -6,13 +6,13 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:08:39 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/09 13:50:46 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/10 16:03:11 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_liste	*ft_lstclean_ps(t_liste **list)
+void	*ft_lstclean_ps(t_liste **list)
 {
 	if ((*list)->next != NULL)
 		ft_lstclean_ps(&(*list)->next);
@@ -41,8 +41,8 @@ t_liste	*ft_lst_a_new(char **argv)
 	t_liste	*first;
 
 	list = malloc(sizeof(t_liste));
-		if (!list)
-			return (NULL);
+	if (!list)
+		return (NULL);
 	list->content = ft_atoi(argv[1]);
 	list->next = NULL;
 	first = list;
