@@ -6,7 +6,7 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 13:38:33 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/11 13:55:07 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 14:52:31 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ static int	separation(t_liste **list_a, t_liste **list_b)
 		return (1);
 	i = len_lst(*list_a) / 2 - 1;
 	push_b(list_a, list_b);
-	free((*list_b)->next);
-	(*list_b)->next = NULL;
 	while (i != 0)
 	{
 		push_b(list_a, list_b);

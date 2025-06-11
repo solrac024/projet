@@ -6,7 +6,7 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:08:39 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/11 13:19:07 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 15:00:38 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,6 @@ void	*ft_lstclean_ps(t_liste **list)
 	free((*list));
 	(*list) = NULL;
 	return (NULL);
-}
-
-t_liste	*ft_lst_b_new(void)
-{
-	t_liste	*list;
-
-	list = malloc(sizeof(*list));
-	if (!list)
-		return (NULL);
-	list->content = 0;
-	list->next = NULL;
-	return (list);
 }
 
 static int	help_for_down(char **argv, t_liste **list, int y)
