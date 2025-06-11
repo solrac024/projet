@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 13:40:35 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/11 14:52:05 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:25:21 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(int argc, char **argv)
 	if (!list_a)
 		return (ft_printf("Error\n"), 0);
 	list_b = NULL;
+	int i = 0;
 	if (len_lst(list_a) < 4 && len_lst(list_a) > 1)
 		push_swap_exception(&list_a);
 	else

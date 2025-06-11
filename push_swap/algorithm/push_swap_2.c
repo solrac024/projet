@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 12:16:11 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/11 14:08:28 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:24:53 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ void	find_median(t_liste **list_a, t_liste **list_b)
 			second_condition(list_a, list_b);
 		else
 			rotate_b(list_b);
+			rotate_a(list_a);
 	}
 }
