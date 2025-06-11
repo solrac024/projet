@@ -6,11 +6,11 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 14:24:44 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/10 17:52:32 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 13:19:30 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	checker_median(t_liste *list_a, t_liste *list_b)
 {

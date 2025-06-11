@@ -6,11 +6,11 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 12:58:31 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/10 16:29:02 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 13:13:38 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	rotate(t_liste **list)
 {

@@ -6,17 +6,17 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:33:57 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/08 16:13:35 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 11:17:37 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_atoi(const char *src)
+long long	ft_atoi(const char *src)
 {
-	int	i;
-	int	s;
-	int	result;
+	int			i;
+	int			s;
+	long long	result;
 
 	s = 1;
 	i = 0;

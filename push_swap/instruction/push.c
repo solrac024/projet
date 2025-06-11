@@ -6,11 +6,11 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 12:52:11 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/06/10 16:28:57 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/06/11 13:13:28 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	push(t_liste **list_1, t_liste **list_2)
 {
