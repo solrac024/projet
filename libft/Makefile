@@ -6,13 +6,14 @@
 #    By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/30 11:11:20 by cade-jes          #+#    #+#              #
-#    Updated: 2025/05/28 11:52:57 by cade-jes         ###   ########.fr        #
+#    Updated: 2025/08/12 12:14:16 by cade-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRCS =	real_ft/ft_atoi.c \
+		real_ft/ft_atoll.c \
 		real_ft/ft_bzero.c \
 		real_ft/ft_calloc.c \
 		real_ft/ft_isalnum.c \
@@ -30,6 +31,7 @@ SRCS =	real_ft/ft_atoi.c \
     	real_ft/ft_strlcat.c \
 		real_ft/ft_strlcpy.c \
 		real_ft/ft_strlen.c \
+		real_ft/ft_strcmp.c \
 		real_ft/ft_strncmp.c \
 		real_ft/ft_strnstr.c \
     	real_ft/ft_strrchr.c \
@@ -60,13 +62,15 @@ SRCS =	real_ft/ft_atoi.c \
 		list/ft_lstdelone.c \
 		list/ft_lstadd_front.c \
 		get_next_line/get_next_line.c \
-		get_next_line/get_next_line_utils.c
+		get_next_line/get_next_line_utils.c \
+		creation_ft/free_2.c
 
 OBJ_DIR		=	obj
 OBJS		=	$(SRCS:%.c=$(OBJ_DIR)/%.o)
+DEP			=	$(SRCS:%.c=$(OBJ_DIR)/%.d)
 
 CC 				= cc
-CFLAGS 			= -Wall -Wextra -Werror -g3
+CFLAGS 			= -Wall -Wextra -Werror -g3 -MMD -MP
 RM 				= rm -rf
 
 all: $(NAME)
@@ -90,3 +94,5 @@ fclean: clean
 re: 	fclean all
 
 .PHONY: all clean fclean re
+
+-include $(DEP)

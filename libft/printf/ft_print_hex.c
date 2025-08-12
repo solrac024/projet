@@ -6,7 +6,7 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 11:37:23 by carlos            #+#    #+#             */
-/*   Updated: 2025/05/28 11:23:30 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:16:05 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ftprinthexa(const char *s, va_list args, t_lst *list)
 	if (!str)
 		return ;
 	ft_putnbr_hexa_2(nbr, str, *s);
-	ft_putstr_fd(str, 1);
+	ft_putstr_fd(str, list->fd);
 	*list->back += ft_strlen(str);
 	free(str);
 	hub(&s[1], args, list);

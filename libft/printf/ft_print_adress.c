@@ -6,7 +6,7 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 10:13:44 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/05/28 11:23:22 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:17:06 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ftputadress(const char *s, va_list args, t_lst *list)
 	nbr = (unsigned long)va_arg(args, void *);
 	if (nbr == 0)
 	{
-		ft_putstr_fd("(nil)", 1);
+		ft_putstr_fd("(nil)", list->fd);
 		*list->back += 5;
 		hub(&s[1], args, list);
 		return ;
@@ -67,7 +67,7 @@ void	ftputadress(const char *s, va_list args, t_lst *list)
 	if (!str)
 		return ;
 	ft_putnbr_hexa(nbr, str);
-	ft_putstr_fd(str, 1);
+	ft_putstr_fd(str, list->fd);
 	*list->back += ft_strlen(str);
 	free (str);
 	hub(&s[1], args, list);

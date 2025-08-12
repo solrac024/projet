@@ -6,7 +6,7 @@
 /*   By: cade-jes <cade-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 19:29:05 by cade-jes          #+#    #+#             */
-/*   Updated: 2025/05/28 11:23:35 by cade-jes         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:15:53 by cade-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	percent_arg(const char *s, va_list args, t_lst *list)
 		ftprinthexa(s, args, list);
 	else if (s[0] == '%')
 	{
-		write(1, "%%", 1);
+		write(list->fd, "%%", 1);
 		*list->back += 1;
 		hub(&s[1], args, list);
 	}
@@ -50,14 +50,14 @@ void	hub(const char *s, va_list args, t_lst *list)
 			percent_arg(&s[i], args, list);
 			return ;
 		}
-		write(1, &s[i], 1);
+		write(list->fd, &s[i], 1);
 		x++;
 		i++;
 	}
 	*list->back = x;
 }
 
-int	ft_printf(const char *s, ...)
+int	ft_printf(int fd, const char *s, ...)
 {
 	int		value;
 	va_list	args;
@@ -67,6 +67,7 @@ int	ft_printf(const char *s, ...)
 	list = malloc(sizeof(t_lst));
 	if (!list)
 		return (0);
+	list->fd = fd;
 	list->back = &value;
 	va_start(args, s);
 	hub(s, args, list);
